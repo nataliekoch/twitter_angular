@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- <link rel="stylesheet" type="text/css" href="styles/stylesheet.css"> -->
+    <script src="vendors/angular.min.js"></script>
+    <script src="vendors/jquery.min.js"></script>
+    <script src="scripts/client.js"></script>
+  </head>
+  <body ng-controller="myController">
+    <h1>Generate a Twitter handler!</h1>
+    <button ng-click="loadHandlers()" class="generateHandlers">Generate Handlers!</button>
+    <ul>
+        <li ng-repeat="n in genHandlers track by $index">
+          <a ng-href="http://twitter.com/{{n}}">{{n}}</a>
+        </li>
+    </ul>
+  </body>
+</html>
